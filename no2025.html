@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu du Souper des Leclerc</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Mountains of Christmas', cursive;
+      background: #0f8a22; /* Fond vert festif */
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+      overflow-y: auto; /* autorise le scroll vertical */
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #b10f2e;
+      text-shadow: 2px 2px 5px #fff, 0 0 15px #0f8a22;
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #fff;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .menu h2 {
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    /* Flocons de neige animés */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: #fff;
+      font-size: 1.5em;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Menu du Souper des Leclerc en date du 7/12🎄</h1>
+
+  <div class="menu">
+    <h2>Accueil</h2>
+    <ul>
+      <li>Cocktail de bienvenue de Brigitte et Stéphan</li>
+    </ul>
+
+    <h2>Entrées</h2>
+    <ul>
+      <li>Plateau d'oeufs Mimosa de Lise et Normand</li>
+      <li>Plateau d'olives, cornichons & fromages variés de Marie-Josée et Patrick</li>
+      <li>Petites saucisses enrobées de bacon de Marie-Josée et Patrick</li>
+      <li>Trempette Mexicaine de Anthonny</li>
+      <li>Crudités de Justine</li>
+      <li>Grignotines/Craquelins de Justine</li>
+    </ul>
+
+    <h2>Plats principaux</h2>
+    <ul>
+      <li>Tourtière du Saguenay-Lac-Saint-Jean de Lise et Normand</li>
+      <li>Pains aux oeufs(12) de Lise et Normand</li>
+      <li>Petites pointes de sandwichs savoureuses de Marie-Josée et Patrick</li>
+      <li>Salade de riz colorée de Marie-Josée et Patrick</li>
+      <li>Pains Gumbo végétarien de Roxanne et Rienzi</li>
+      <li>Salade d'épinards de Anthonny</li>
+      <li>Pâté Mexicain de Félix</li>
+    </ul>
+
+    <h2>Desserts</h2>
+    <ul>
+      <li>Salade de Fruits de Lise et Normand</li>
+      <li>Mini cornets au sucre à la crème de Marie-Josée et Patrick</li>
+      <li>Sushis dessert avec sauce au sucre à la crème de Roxanne et Rienzi</li>
+      <li>Bouchées de Rice Krispies marbrées au chocolat de Andréanne</li>
+      <li>Fudge au Toblerone de Brigitte</li>
+    </ul>
+
+    <h2>Boissons</h2>
+    <ul>
+      <li>Bouteilles de vin(3) Lise et Normand</li>
+      <li>Jus et boisson gazeuses de Brigitte et Stéphan</li>                   
+      <li>Café/Thé de Brigitte et Stéphan</li>                   
+    </ul>
+  </div>
+
+  <footer>
+    ❄️ Joyeuses Fêtes à toute la famille Leclerc ❄️
+  </footer>
+
+  <!-- Génération des flocons -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 30; i++) {
+      let flake = document.createElement("div");
+      flake.className = "snowflake";
+      flake.innerHTML = "❄";
+      flake.style.left = Math.random() * window.innerWidth + "px";
+      flake.style.animationDuration = (5 + Math.random() * 5) + "s";
+      flake.style.fontSize = (12 + Math.random() * 20) + "px";
+      body.appendChild(flake);
+    }
+  </script>
+</body>
+</html>
