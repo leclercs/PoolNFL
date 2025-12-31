@@ -30,7 +30,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 30, 2025 23:59:59").getTime();
+var countDownDate = new Date("Sep 02, 2026 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -50,13 +50,13 @@ var x = setInterval(function() {
   document.getElementById("demo").style["font-size"] = "150%";
   document.getElementById("demo").style.fontFamily = "NFL Packers,Green,serif";
   document.getElementById("demo").innerHTML = 
-"Heure limite pour la remise des choix de la SEMAINE 18 dans: " + hours + "h "
+"Heure limite pour la remise des choix de la SEMAINE 1 dans: " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Heure limite pour la remise des choix de la SEMAINE 18 dans: IL EST TROP TARD!!!";
+    document.getElementById("demo").innerHTML = "Heure limite pour la remise des choix de la SEMAINE 1 dans: IL EST TROP TARD!!!";
   }
 }, 1000);
 </script>
